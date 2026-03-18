@@ -31,9 +31,6 @@ let chatHistory = [];
 const pinecone = new Pinecone();
 const pineconeIndex = pinecone.Index(process.env.PINECONE_INDEX_NAME);
 
-
-
-
 async function chatting(question){
 
     let searchQuestion = question; // Default to user's question
@@ -119,7 +116,6 @@ chatHistory.push(`Human: ${question}`);
 chatHistory.push(`AI: ${answer}`);
 
 }
-
 
 async function main(){
    const userProblem = readlineSync.question("Ask me anything--> ");
